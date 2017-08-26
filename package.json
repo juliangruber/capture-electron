@@ -1,0 +1,35 @@
+{
+  "name": "capture-electron",
+  "description": "Capture screenshots using electron",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/juliangruber/capture-electron.git"
+  },
+  "scripts": {
+    "test": "tap --reporter=tap test.js && npm run lint",
+    "lint": "prettier-standard '**/*.js' && standard"
+  },
+  "homepage": "https://github.com/juliangruber/capture-electron",
+  "main": "index.js",
+  "dependencies": {
+    "electron": "^1.7.5",
+    "safe-buffer": "^5.1.1"
+  },
+  "devDependencies": {
+    "prettier-standard": "^6.0.0",
+    "standard": "^10.0.3",
+    "tap": "^10.7.2"
+  },
+  "keywords": [
+    "electron",
+    "screenshot",
+    "headless"
+  ],
+  "author": {
+    "name": "Julian Gruber",
+    "email": "mail@juliangruber.com",
+    "url": "http://juliangruber.com"
+  },
+  "license": "MIT"
+}
