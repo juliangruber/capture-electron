@@ -9,18 +9,16 @@ module.exports = ({
   wait: wait = 0,
   format: format = 'png',
   clip: clip = false
-}) => {
-  const args = [
-    `${__dirname}/script/render.js`,
-    url,
-    width,
-    height,
-    wait,
-    format.toLowerCase(),
-    clip
-  ]
-  const opts = { maxBuffer: Infinity, encoding: 'buffer' }
-  return exec(`${electron} ${args.join(' ')}`, opts).then(
-    ({ stdout }) => stdout
-  )
-}
+}) =>
+  exec(
+    `${electron} ${[
+      `${__dirname}/script/render.js`,
+      url,
+      width,
+      height,
+      wait,
+      format.toLowerCase(),
+      clip
+    ].join(' ')}`,
+    { maxBuffer: Infinity, encoding: 'buffer' }
+  ).then(({ stdout }) => stdout)
