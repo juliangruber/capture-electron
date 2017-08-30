@@ -12,10 +12,18 @@ test('setup', t => {
   })
 })
 
-test('screenshot', async t => {
+test('promise', async t => {
   const pic = await screenshot({ url })
   t.ok(pic)
   t.ok(Buffer.isBuffer(pic))
+})
+
+test('stream', t => {
+  t.plan(2)
+  screenshot
+    .stream({ url })
+    .once('data', chunk => t.ok(Buffer.isBuffer(chunk)))
+    .on('end', () => t.ok(true))
 })
 
 test('cleanup', t => {

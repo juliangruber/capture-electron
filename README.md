@@ -38,6 +38,23 @@ Options:
 - `wait` Time in `ms` to wait after the `DOMContentLoaded` event
 - `format` File format (`png`, `jpg`, `bmp`)
 
+### screenshot.stream(options)
+
+Takes the same options as above, but returns a stream instead.
+
+Example:
+
+```js
+capture
+  .stream({
+    url: 'https://github.com/',
+    width: 800,
+    height: 600
+  })
+  .pipe(fs.createWriteStream(`${__dirname}/example-stream.png`))
+  .on('close', () => console.log('open example-stream.png'))
+```
+
 ## Installation
 
 With [npm](https://npmjs.org) do:
