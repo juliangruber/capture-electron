@@ -4,6 +4,13 @@ Capture screenshots using [electron](http://electron.atom.io/).
 
 [![build status](https://secure.travis-ci.org/juliangruber/capture-electron.png)](http://travis-ci.org/juliangruber/capture-electron)
 
+## Features
+
+- Promise and Stream interfaces
+- Configurable Viewport
+- Waits for `DOMContentLoaded`
+- File formats `png`, `jpg` and `bmp`
+
 ## Example
 
 Capture a `800x600` screenshot of [github.com](http://github.com):
