@@ -5,7 +5,6 @@ const width = Number(process.argv[3])
 const height = Number(process.argv[4])
 const wait = Number(process.argv[5])
 const format = process.argv[6]
-const clip = process.argv[7] === 'true'
 
 let win
 
@@ -17,17 +16,7 @@ app.on('ready', () => {
   })
   win.webContents.on('did-finish-load', () => {
     setTimeout(() => {
-      // set background?
-      const args = []
-      if (clip) {
-        args.push({
-          x: 0,
-          y: 0,
-          width,
-          height
-        })
-      }
-      args.push(img => {
+      win.capturePage(img => {
         const buf =
           format === 'jpg' || format === 'jpeg'
             ? img.toJPEG()
@@ -36,7 +25,6 @@ app.on('ready', () => {
         if (written) process.exit()
         else process.stdout.on('drain', () => process.exit())
       })
-      win.capturePage(...args)
     }, wait)
   })
 })

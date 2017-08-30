@@ -24,31 +24,9 @@ capture({
 
 ![github.com](https://raw.github.com/juliangruber/capture-electron/master/example.png)
 
-## Clipped Example
-
-Capture a clipped `320x320` screenshot of [github.com](http://github.com):
-
-```js
-const capture = require('capture-electron')
-const fs = require('fs')
-
-capture({
-  url: 'https://github.com/',
-  width: 320,
-  height: 320,
-  clip: true
-}).then(screenshot => {
-  fs.writeFileSync(`${__dirname}/example-clipped.png`, screenshot)
-  console.log('open example.png')
-})
-
-```
-
-![github.com](https://raw.github.com/juliangruber/capture-electron/master/example-clipped.png)
-
 ## API
 
-### screenshot({ url, width = 1024, height = 768, wait = 0, format = 'png', clip = false })
+### screenshot({ url, width = 1024, height = 768, wait = 0, format = 'png' })
 
 Capture a screenshot of `url`, returns a `Promise` which resolves with a buffer.
 
@@ -59,7 +37,6 @@ Options:
 - `height` Viewport height
 - `wait` Time in `ms` to wait after the `DOMContentLoaded` event
 - `format` File format (`png`, `jpg`, `bmp`)
-- `clip` Cut the image to exact dimensions, removing the fold.
 
 ## Installation
 

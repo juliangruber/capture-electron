@@ -7,8 +7,7 @@ module.exports = ({
   width: width = 1024,
   height: height = 768,
   wait: wait = 0,
-  format: format = 'png',
-  clip: clip = false
+  format: format = 'png'
 }) =>
   exec(
     `${electron} ${[
@@ -17,8 +16,7 @@ module.exports = ({
       width,
       height,
       wait,
-      format.toLowerCase(),
-      clip
+      format.toLowerCase()
     ].join(' ')}`,
     { maxBuffer: Infinity, encoding: 'buffer' }
   ).then(({ stdout }) => stdout)
