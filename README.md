@@ -70,6 +70,13 @@ With [npm](https://npmjs.org) do:
 npm install capture-electron
 ```
 
+## CI
+
+This project requires an `xvfb` setup to be running in your CI environment.
+For an example how to set one up, check out the [.travis.yml](https://github.com/juliangruber/capture-electron/blob/master/.travis.yml).
+After that, no further setup is required however, as the electron executable is
+installed automatically.
+
 ## Related projects
 
 - __[capture-screenshot](https://github.com/juliangruber/capture-screenshot)__ &mdash; Capture screenshots in multiple browsers
