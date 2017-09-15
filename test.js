@@ -22,8 +22,8 @@ test('stream', t => {
   t.plan(2)
   screenshot
     .stream({ url })
-    .once('data', chunk => t.ok(Buffer.isBuffer(chunk)))
-    .on('end', () => t.ok(true))
+    .once('data', chunk => t.ok(Buffer.isBuffer(chunk), 'data'))
+    .on('end', () => t.ok(true, 'end'))
 })
 
 test('cleanup', t => {
