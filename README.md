@@ -73,9 +73,10 @@ npm install capture-electron
 ## CI
 
 This project requires an `xvfb` setup to be running in your CI environment.
-For an example how to set one up, check out the [.travis.yml](https://github.com/juliangruber/capture-electron/blob/master/.travis.yml).
-After that, no further setup is required however, as the electron executable is
-installed automatically.
+The simplest way to achieve this is using [xvfb-maybe](https://github.com/paulcbetts/xvfb-maybe):
+Simply install the package using `npm` and then call your test script with `xvfb-maybe` in front.
+
+For an example, check out the `test` script in this project's [package.json](https://github.com/juliangruber/capture-electron/blob/master/package.json).
 
 ## Related projects
 

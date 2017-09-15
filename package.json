@@ -7,7 +7,7 @@
     "url": "git://github.com/juliangruber/capture-electron.git"
   },
   "scripts": {
-    "test": "tap --reporter=tap test.js && npm run lint",
+    "test": "xvfb-maybe tap --reporter=tap test.js && npm run lint",
     "lint": "prettier-standard '**/*.js' && standard"
   },
   "homepage": "https://github.com/juliangruber/capture-electron",
@@ -19,7 +19,8 @@
   "devDependencies": {
     "prettier-standard": "^6.0.0",
     "standard": "^10.0.3",
-    "tap": "^10.7.2"
+    "tap": "^10.7.2",
+    "xvfb-maybe": "^0.2.1"
   },
   "keywords": [
     "electron",
