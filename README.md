@@ -80,6 +80,7 @@ installed automatically.
 ## Related projects
 
 - __[capture-screenshot](https://github.com/juliangruber/capture-screenshot)__ &mdash; Capture screenshots in multiple browsers
+- __[capture-chrome](https://github.com/juliangruber/capture-chrome)__ &mdash; Capture screenshots using Chrome
 - __[capture-phantomjs](https://github.com/juliangruber/capture-phantomjs)__ &mdash; Capture screenshots using PhantomJS
 
 ## License
