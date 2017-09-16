@@ -14,7 +14,8 @@
   "main": "index.js",
   "dependencies": {
     "electron": "^1.7.5",
-    "safe-buffer": "^5.1.1"
+    "safe-buffer": "^5.1.1",
+    "shell-escape": "^0.2.0"
   },
   "devDependencies": {
     "prettier-standard": "^6.0.0",

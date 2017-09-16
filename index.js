@@ -2,6 +2,7 @@ const { promisify } = require('util')
 const exec = promisify(require('child_process').exec)
 const { spawn } = require('child_process')
 const electron = require('electron')
+const escape = require('shell-escape')
 
 module.exports = ({
   url,
@@ -11,14 +12,15 @@ module.exports = ({
   format: format = 'png'
 }) =>
   exec(
-    `${electron} ${[
+    escape([
+      electron,
       `${__dirname}/script/render.js`,
       url,
       width,
       height,
       wait,
       format.toLowerCase()
-    ].join(' ')}`,
+    ]),
     { maxBuffer: Infinity, encoding: 'buffer' }
   ).then(({ stdout }) => stdout)
 
