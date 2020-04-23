@@ -19,7 +19,7 @@ app.on('ready', () => {
       win.capturePage(img => {
         const buf =
           format === 'jpg' || format === 'jpeg'
-            ? img.toJPEG()
+            ? img.toJPEG(100)
             : format === 'bmp' ? img.toBitmap() : img.toPNG()
         const written = process.stdout.write(buf)
         if (written) process.exit()
