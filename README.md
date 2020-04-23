@@ -2,7 +2,7 @@
 
 Capture screenshots using [electron](http://electron.atom.io/).
 
-[![build status](https://secure.travis-ci.org/juliangruber/capture-electron.png)](http://travis-ci.org/juliangruber/capture-electron)
+![CI](https://github.com/juliangruber/capture-electron/workflows/CI/badge.svg)
 
 ## Features
 
