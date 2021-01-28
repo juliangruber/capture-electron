@@ -13,7 +13,7 @@
   "homepage": "https://github.com/juliangruber/capture-electron",
   "main": "index.js",
   "dependencies": {
-    "electron": "^7.2.4",
+    "electron": "^9.4.0",
     "safe-buffer": "^5.1.1",
     "shell-escape": "^0.2.0"
   },
