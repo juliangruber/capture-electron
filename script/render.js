@@ -16,7 +16,7 @@ app.on('ready', () => {
   })
   win.webContents.on('did-finish-load', () => {
     setTimeout(() => {
-      win.capturePage(img => {
+      win.capturePage().then(img => {
         const buf =
           format === 'jpg' || format === 'jpeg'
             ? img.toJPEG(100)
